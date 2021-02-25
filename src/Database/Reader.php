@@ -250,9 +250,7 @@ class Reader implements ProviderInterface
         }
         [$record, $prefixLen] = $this->dbReader->getWithPrefixLen($ipAddress);
         if ($record === null) {
-            throw new AddressNotFoundException(
-                "The address $ipAddress is not in the database."
-            );
+            return [false,false];
         }
         if (!\is_array($record)) {
             // This can happen on corrupt databases. Generally,

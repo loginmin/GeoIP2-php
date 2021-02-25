@@ -13,8 +13,11 @@ class Util
      * @internal
      * @ignore
      */
-    public static function cidr(string $ipAddress, int $prefixLen): string
+    public static function cidr(string $ipAddress, $prefixLen): string
     {
+        if ($prefixLen === false){
+            return 'id数据查询失败';
+        }
         $ipBytes = inet_pton($ipAddress);
         $networkBytes = str_repeat("\0", \strlen($ipBytes));
 
