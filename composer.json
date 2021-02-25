@@ -1,5 +1,5 @@
 {
-    "name": "geoip2/LoginGeoip2",
+    "name": "update-gip2/up-geoip2",
     "description": "MaxMind GeoIP2 PHP API",
     "keywords": ["geoip", "geoip2", "geolocation", "ip", "maxmind"],
     "homepage": "https://github.com/loginmin/GeoIP2-php",
